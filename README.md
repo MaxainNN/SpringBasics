@@ -22,7 +22,8 @@
     ├── scope # Scopes
     ├── lifecycle # Bean's lifecycle
     ├── aware # Aware interfaces
-    └── postprocessor # Bean's postprocessors
+    ├── postprocessor # Bean's postprocessors
+    └── props # Application properties
 ```
 
 ### Команды :
@@ -32,6 +33,7 @@
 ./gradlew run -PmainClass="com.github.maxain.spring.lifecycle.Main" # Запуск из пакета "lifecycle"
 ./gradlew run -PmainClass="com.github.maxain.spring.aware.Main" # Запуск из пакета "aware"
 ./gradlew run -PmainClass="com.github.maxain.spring.postprocessor.Main" # Запуск из пакета "postprocessor"
+./gradlew run -PmainClass="com.github.maxain.spring.props.Main" # Запуск из пакета "props"
 ```
 
 ### Версии `Java` и `Gradle`

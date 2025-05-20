@@ -22,6 +22,8 @@ dependencies {
     implementation("jakarta.annotation:jakarta.annotation-api:2.1.1")
     // Для аннотаций управления жизненного цикла бина (Java 8)
     //implementation("javax.annotation:javax.annotation-api:1.3.2")
+    // Для работы с yaml файлами
+    implementation("org.yaml:snakeyaml:2.2")
 
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
