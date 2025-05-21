@@ -23,7 +23,8 @@
     ├── lifecycle # Bean's lifecycle
     ├── aware # Aware interfaces
     ├── postprocessor # Bean's postprocessors
-    └── props # Application properties
+    ├── props # Application properties
+    └── spel # Spel expressions
 ```
 
 ### Команды :
@@ -34,6 +35,7 @@
 ./gradlew run -PmainClass="com.github.maxain.spring.aware.Main" # Запуск из пакета "aware"
 ./gradlew run -PmainClass="com.github.maxain.spring.postprocessor.Main" # Запуск из пакета "postprocessor"
 ./gradlew run -PmainClass="com.github.maxain.spring.props.Main" # Запуск из пакета "props"
+./gradlew run -PmainClass="com.github.maxain.spring.spel.Main" # Запуск из пакета "spel"
 ```
 
 ### Версии `Java` и `Gradle`
