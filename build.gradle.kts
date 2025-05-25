@@ -34,7 +34,7 @@ application {
         if (project.hasProperty("mainClass")) {
             project.property("mainClass") as String
         } else {
-            "com.github.maxain.spring.di.CafeApplication"
+            "com.github.maxain.spring.application.Application"
         }
     )
 }
