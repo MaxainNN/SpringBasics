@@ -25,12 +25,16 @@
     ├── postprocessor # Bean's postprocessors
     ├── props # Application properties
     ├── spel # Spel expressions
-    └── profile # Profile / Lazy
+    ├── profile # Profile / Lazy
+    ├── event # Events / EventListener
+    ├── proxy # Proxy pattern
+    └── application # Final application
 ```
 
 ### Команды :
 ```bash
-./gradlew run # Запуск метода из класса "di" (По умолчанию для таски "run")
+./gradlew run # Запуск класса из пакета application (По умолчанию для таски "run")
+./gradlew run -PmainClass="com.github.maxain.spring.di.CafeApplication" # Запуск из пакета "di"
 ./gradlew run -PmainClass="com.github.maxain.spring.scope.RestaurantApplication" # Запуск метода из класса "scope"
 ./gradlew run -PmainClass="com.github.maxain.spring.lifecycle.Main" # Запуск из пакета "lifecycle"
 ./gradlew run -PmainClass="com.github.maxain.spring.aware.Main" # Запуск из пакета "aware"
@@ -38,7 +42,21 @@
 ./gradlew run -PmainClass="com.github.maxain.spring.props.Main" # Запуск из пакета "props"
 ./gradlew run -PmainClass="com.github.maxain.spring.spel.Main" # Запуск из пакета "spel"
 ./gradlew run -PmainClass="com.github.maxain.spring.profile.Main" # Запуск из пакета "profile"
+./gradlew run -PmainClass="com.github.maxain.spring.event.Main" # Запуск из пакета "event"
+./gradlew run -PmainClass="com.github.maxain.spring.proxy.Main" # Запуск из пакета "proxy"
 ```
+
+### Описание финального приложения в пакете `application`
+
+Приложение представляет собой менеджер списка задач 
+(`To-Do List`) с возможностью:
+- Добавления новых задач
+- Отметки задач как завершенных
+- Сохранения задач в файл
+- Получения актуального списка задач
+
+Реализация использует возможности :
+`EventListener`, `Profile`, `PropertySource`, `PostContruct`.
 
 ### Версии `Java` и `Gradle`
 
@@ -67,19 +85,19 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-8.6-bin.zip
 
 ### Первый запуск класса в пакете `basic`: 
 
-<img src="images/16.05_spring_base_init.png" width="1000" height="600">
+<img src="images/16.05_spring_base_init.png" width="500" height="300">
 
 ### Dependency injection:
 
-<img src="images/di_spring.png" width="1000" height="650">
+<img src="images/di_spring.png" width="500" height="325">
 
 ### Scopes
 
-<img src="images/scope_spring.webp" height="504" width="990">
+<img src="images/scope_spring.webp" height="250" width="500">
 
 ### Жизненный цикл бина :
 
-<img src="images/Spring-Bean-Life-cycle-Flow.png" height="768" width="1024">
+<img src="images/Spring-Bean-Life-cycle-Flow.png" height="360" width="500">
 
 ### Инициализация бина:
 
@@ -87,7 +105,7 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-8.6-bin.zip
 
 ### Application with Bean's postprocessors (package - postprocessor)
 
-<img src="images/19.05_spring_postpr_output.png" height="600" width="1000">
+<img src="images/19.05_spring_postpr_output.png" height="300" width="600">
 
 ### Документация:
 - [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
